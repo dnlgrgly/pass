@@ -8,4 +8,9 @@ Budapest already tried to accomplish creating a system like MetroCard or Oyster 
 Yes, totally. Also, it's our school project, so we are definietly going to work on this consistently so that we don't get a bad grade.
 
 ## How can I contribute?
-There are (going to be) several cards under the `Projects` tab - feel free to assign some of them to yourself, or if you find a bug, please create an Issue for it, we'll look into it.
+There are (going to be) several cards under the `Projects` tab - feel free to assign some of them to yourself, or if you find a bug, please create an `Issue` for it, we'll look into it.
+
+## Main contributors
+@dandesz198
+@daniellesti
+@hajdupetke
