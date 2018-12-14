@@ -11,6 +11,8 @@ Yes, totally. Also, it's our school project, so we are definietly going to work 
 There are (going to be) several cards under the `Projects` tab - feel free to assign some of them to yourself, or if you find a bug, please create an `Issue` for it, we'll look into it.
 
 ## Main contributors
-@dandesz198
-@daniellesti
-@hajdupetke
+**@dandesz198** [Facebook](fb.me/dandesz198) [Blog](blog.risingstack.com/author/danielg/)
+
+**@daniellesti** [Facebook](fb.me/lestid) [Twitter](twitter.com/lesti_dnl)
+
+**@hajdupetke** [Facebook](fb.me/hajdupetke) [Twitter](twitter.com/hajdupetke)
