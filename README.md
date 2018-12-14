@@ -11,7 +11,7 @@ Yes, totally. Also, it's our school project, so we are definietly going to work 
 
 ## How can I contribute?
 
-* **If you want to help in development,** you can grab cards from our [Trello board](https://trello.com/b/QhJUPS7o/pass). *Feel free to [drop a line](mailto:daniel.gergely@rising-stack.com) if you want to be a member of the board*
+* **If you want to help in development,** you can grab cards from our [Trello board](https://trello.com/b/QhJUPS7o/pass). *Feel free to [drop a line](mailto:daniel.gergely@risingstack.com) if you want to be a member of the board*
 * **If you found a bug,** create an `Issue` or create a card on our Trello board in the `Bugs` column.
 * **For feature requests**, drop us a line or create a card in the `Features` column.
 
