@@ -1,6 +1,8 @@
 # Pass
 [WIP] An open-source electronic public transport ticket system made for Budapest.
 
+![Pass banner with slogan](https://github.com/dandesz198/pass/blob/master/assets/Banner%20-%20with%20slogan.png?raw=true)
+
 ## What's this about?
 Budapest already tried to accomplish creating a system like MetroCard or Oyster several times with projects like Electra or RIGO, but they always failed. The main goal of this project is to create and demo something like the RIGO system.
 
