@@ -21,3 +21,12 @@ Yes, totally. Also, it's our school project, so we are definietly going to work 
 **@daniellesti** [Facebook](fb.me/lestid) [Twitter](twitter.com/lesti_dnl)
 
 **@hajdupetke** [Facebook](fb.me/hajdupetke) [Twitter](twitter.com/hajdupetke)
+
+## Resources
+[Design conception for the passanger-facing frontend](https://szifon.com/2017/07/30/bkk-online-shop-design-koncepcio/)
+
+[Branding assets and stuff (Adobe XD)](https://xd.adobe.com/spec/1661cfda-8373-48a4-4555-6d6bc09d04e7-6050/)
+
+## Support us!
+
+If you want to support our hard work with money, you can [donate to us via PayPal](paypal.me/dandesz198)
