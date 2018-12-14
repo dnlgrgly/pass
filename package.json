@@ -1,0 +1,16 @@
+{
+  "name": "pass",
+  "version": "0.0.1",
+  "description": "An open-source electronic public transport ticket system made for Budapest.",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"cd backend && yarn start\" \"cd client && yarn start\"",
+    "depinit": "yarn && concurrently \"cd backend && yarn\" \"cd client && yarn\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "concurrently": "^4.0.1"
+  }
+}
