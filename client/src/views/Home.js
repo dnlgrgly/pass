@@ -25,7 +25,7 @@ const Subheading = styled.h2`
   font-size: 2em;
   color: #222;
   font-weight: 800;
-  margin: 1em 0 0.5em 0;
+  margin-top: 1em;
 `;
 
 const Miniheading = styled.h2`
@@ -36,7 +36,7 @@ const Miniheading = styled.h2`
 
 const VerticalDrawer = styled.div`
   margin: 0 -5vw;
-  padding: 0 5vw;
+  padding: 1em 5vw;
   display: flex;
   flex-direction: row;
   overflow: scroll;
@@ -63,8 +63,8 @@ class Home extends Component {
         <Subheading>Most popular</Subheading>
         <VerticalDrawer>
           <PassCard type="private" />
-          <PassCard />
-          <PassCard />
+          <PassCard type="pupil" />
+          <PassCard type="bubi" />
         </VerticalDrawer>
       </Container>
     );

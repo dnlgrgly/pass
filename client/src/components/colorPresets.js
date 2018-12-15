@@ -1,7 +1,7 @@
 export default {
-  private: ["#8e44ad", "#ddc4e8"],
-  business: ["#8e44ad", "#ddc4e8"],
-  pupil: ["#2980b9", "#bddcf0"],
-  student: ["#2980b9", "#bddcf0"],
-  bubi: ["#27ae60", "#b3eecc"]
+  private: ["#3742fa", "#8a90fc"],
+  business: ["#3742fa", "$8a90fc"],
+  pupil: ["#0041fb", "#517eff"],
+  student: ["#0041fb", "#517eff"],
+  bubi: ["#2ed573", "#83e6ac"]
 };
