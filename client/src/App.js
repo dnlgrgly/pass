@@ -3,17 +3,24 @@ import { Router } from "react-stax";
 import "./App.css";
 import Home from "./views/Home";
 import Inspector from "./views/Inspector";
-// import styled from "styled-components";
+import styled from "styled-components";
+import img from "./assets/bg.png";
+
+const Container = styled.div`
+  background-image: url(${img});
+  background-repeat: no-repeat;
+  background-color: #eee;
+`;
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <Container className="App">
         <Router defaultPage="/">
           <Home page="/" />
           <Inspector page="inspector" />
         </Router>
-      </div>
+      </Container>
     );
   }
 }
