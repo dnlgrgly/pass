@@ -48,7 +48,7 @@ const VerticalDrawer = styled.div`
 
 const Image = styled.img`
   width: 30vw;
-  max-width: 5cm;
+  max-width: 4cm;
 `;
 
 class Home extends Component {
@@ -62,7 +62,7 @@ class Home extends Component {
         </Miniheading>
         <Subheading>Most popular</Subheading>
         <VerticalDrawer>
-          <PassCard />
+          <PassCard type="private" />
           <PassCard />
           <PassCard />
         </VerticalDrawer>
