@@ -9,7 +9,7 @@ Budapest already tried to accomplish creating a system like MetroCard or Oyster 
 ## Are you serious?
 Yes, totally. Also, it's our school project, so we are definietly going to work on this consistently so that we don't get a bad grade.
 
-## Main goals
+## Main goals
 * *Phase 1* Develop a QR-code based electronic public transport ticket and pass system 
 * *Phase 2* Add support for NFC cards
   * Possibly build a demo
