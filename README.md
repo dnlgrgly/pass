@@ -1,5 +1,5 @@
 # Pass
-[WIP] An open-source electronic public transport ticket system made for Budapest.
+[WIP] An open-source electronic public transport ticket system.
 
 ![Pass banner with slogan](https://github.com/dandesz198/pass/blob/master/assets/Banner%20-%20with%20slogan.png?raw=true)
 
@@ -8,6 +8,19 @@ Budapest already tried to accomplish creating a system like MetroCard or Oyster 
 
 ## Are you serious?
 Yes, totally. Also, it's our school project, so we are definietly going to work on this consistently so that we don't get a bad grade.
+
+## Main goals
+* *Phase 1* Develop a QR-code based electronic public transport ticket and pass system 
+* *Phase 2* Add support for NFC cards
+  * Possibly build a demo
+* *Phase 3* Add support for prepaid-type accounts
+* *Phase 4* Get a city to use this system
+
+## While developing, try to keep an eye on
+* Writing readable, reusable, clean, efficient and modern code
+* Consistent, `camelCased` naming
+* Try to avoid code or feature duplication
+* Try to avoid dependency hell, use as few dependencies as possible
 
 ## How can I contribute?
 
@@ -25,7 +38,7 @@ Yes, totally. Also, it's our school project, so we are definietly going to work 
 ## Resources
 [Design conception for the passanger-facing frontend](https://szifon.com/2017/07/30/bkk-online-shop-design-koncepcio/)
 
-[Branding assets and stuff (Adobe XD)](https://xd.adobe.com/spec/1661cfda-8373-48a4-4555-6d6bc09d04e7-6050/)
+[Branding assets and stuff (Adobe XD)](https://xd.adobe.com/spec/9dcdf89b-04bb-4434-4c9d-3ba40da735e6-ebfc/)
 
 ## Support us!
 

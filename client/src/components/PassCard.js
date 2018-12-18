@@ -55,6 +55,7 @@ class PassCard extends Component {
         return require("../assets/person.png");
     }
   }
+
   render() {
     const { type } = this.props;
 
