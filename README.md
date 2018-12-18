@@ -4,7 +4,7 @@
 ![Pass banner with slogan](https://github.com/dandesz198/pass/blob/master/assets/Banner%20-%20with%20slogan.png?raw=true)
 
 ## What's this about?
-Budapest already tried to accomplish creating a system like MetroCard or Oyster several times with projects like Electra or RIGO, but they always failed. The main goal of this project is to create and demo something like the RIGO system.
+Budapest already tried to accomplish creating a system like MetroCard or Oyster several times with projects like Electra or RIGO, but they failed every time. The main goal of this project is to create an open-source electronic ticket system that's suitable for cities.
 
 ## Are you serious?
 Yes, totally. Also, it's our school project, so we are definietly going to work on this consistently so that we don't get a bad grade.
@@ -19,8 +19,8 @@ Yes, totally. Also, it's our school project, so we are definietly going to work 
 ## While developing, try to keep an eye on
 * Writing readable, reusable, clean, efficient and modern code
 * Consistent, `camelCased` naming
-* Try to avoid code or feature duplication
-* Try to avoid dependency hell, use as few dependencies as possible
+* Avoiding code or feature duplication
+* Avoiding dependency hell, use as few dependencies as possible
 
 ## How can I contribute?
 * **If you want to help in development,** you can grab cards from our [Trello board](https://trello.com/b/QhJUPS7o/pass). *Feel free to [drop a line](mailto:daniel.gergely@risingstack.com) if you want to be a member of the board*
