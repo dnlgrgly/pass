@@ -1,5 +1,5 @@
 const db = require("./db");
-const { hash } = require("../utils/hash");
+const { hash, compare } = require("../utils/hash");
 const { throw400, checkDuplicates } = require("../utils/errors");
 
 const collectionName = "users";
@@ -29,6 +29,7 @@ async function login({ email, password }) {
       msg: "No matching email found"
     });
   }
+
   if (!compare(password, user.password)) {
     throw400({
       msg: "Incorrect password"
