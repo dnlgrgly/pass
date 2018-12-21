@@ -4,7 +4,7 @@
   "description": "",
   "main": "web/server.js",
   "scripts": {
-    "start": "node web/index.js",
+    "start": "NODE_ENV=dev nodemon web/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -28,6 +28,7 @@
     "winston": "^3.1.0"
   },
   "devDependencies": {
+    "nodemon": "^1.18.9",
     "prettier": "1.15.2"
   }
 }
