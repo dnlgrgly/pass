@@ -1,22 +1,19 @@
-const crypto = require("crypto");
+const bcrypt = require("bcrypt");
+const saltRounds = 10;
 
-const SALT_LENGTH = 10;
-
-function generateSalt() {
-  return crypto
-    .randomBytes(Math.ceil(SALT_LENGTH / 2))
-    .toString("hex")
-    .slice(0, SALT_LENGTH);
+function hash(plain) {
+  bcrypt.hash(plain, saltRounds, function(err, hash) {
+    return hash || err;
+  });
 }
 
-function hash(password, salt) {
-  return crypto
-    .createHmac("sha512", salt)
-    .update(password)
-    .digest("hex");
+function compare(plain, hash) {
+  bcrypt.compare(plain, hash, function(err, res) {
+    return res || err;
+  });
 }
 
 module.exports = {
-  generateSalt,
-  hash
+  hash,
+  compare
 };

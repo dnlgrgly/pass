@@ -1,5 +1,5 @@
 const db = require("./db");
-const { generateSalt, hash } = require("../utils/hash");
+const { hash } = require("../utils/hash");
 const { throw400, checkDuplicates } = require("../utils/errors");
 
 const collectionName = "users";
@@ -29,24 +29,22 @@ async function login({ email, password }) {
       msg: "No matching email found"
     });
   }
-  if (user.password !== hash(password, user.salt)) {
+  if (!compare(password, user.password)) {
     throw400({
       msg: "Incorrect password"
     });
   }
 
-  // do not include the password and salt in the response
+  // do not include the password in the response
   user.password = undefined;
-  user.salt = undefined;
   return user;
 }
 
 async function register({ email, password, name, role }) {
   // hash the user password before storing it
-  const salt = generateSalt();
-  password = hash(password, salt);
+  const hashedPassword = hash(password);
 
-  const user = { email, name, password, role, salt };
+  const user = { email, name, password: hashedPassword, role };
   await db
     .collection(collectionName)
     .insertOne(user)
@@ -56,9 +54,8 @@ async function register({ email, password, name, role }) {
       })
     );
 
-  // do not include the password and salt in the response
+  // do not include the password in the response
   user.password = undefined;
-  user.salt = undefined;
   return user;
 }
 
