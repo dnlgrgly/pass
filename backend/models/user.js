@@ -40,11 +40,11 @@ async function login({ email, password }) {
   return user;
 }
 
-async function register({ email, password, name, role }) {
+async function register({ email, password, name, id }) {
   // hash the user password before storing it
-  const hashedPassword = hash(password);
+  password = hash(password);
 
-  const user = { email, name, password: hashedPassword, role };
+  const user = { email, name, password, id };
   await db
     .collection(collectionName)
     .insertOne(user)

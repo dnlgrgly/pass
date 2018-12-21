@@ -2,6 +2,7 @@ import React, { Component, Fragment } from "react";
 import { view } from "react-stax";
 import { PassCard } from "../components";
 import styled from "styled-components";
+import { register } from '../api/user'
 
 const Container = styled.div`
   padding: 5vh 5vw;
@@ -52,6 +53,10 @@ const Image = styled.img`
 `;
 
 class Home extends Component {
+  componentDidMount() {
+    register({ email: 'dandesz198@gmail.com', name: 'Dániel Gergely', id: '72161452803', password: 'szeretemafaszt' })
+  }
+
   render() {
     return (
       <Container>
