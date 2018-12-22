@@ -1,6 +1,10 @@
 # Pass
 An open-source electronic public transport ticket system.
+
 **Public demo coming in a few months, stay tuned!**
+
+* [Follow us on Facebook](https://www.facebook.com/PassTransport)
+* [Donate on Patreon (page is under review)](https://www.patreon.com/PassTransport)
 
 ![Pass banner with slogan](https://github.com/dandesz198/pass/blob/master/assets/Banner%20-%20with%20slogan.png?raw=true)
 
@@ -47,4 +51,4 @@ Yes, totally. Also, it's our school project, so we are definietly going to work 
 Once we'll have enough money from donations, we'll try to host a bug bounty event, mainly focused on security issues.
 
 ## Support us!
-If you want to support our hard work, pay for the infrastucture, or donate for a bug bounty event, you can [donate to us via PayPal](https://paypal.me/dandesz198)
+If you want to support our hard work, pay for the infrastucture, or donate for a bug bounty event, you can [donate to us via PayPal](https://paypal.me/dandesz198), or [be our patron on Patreon (page is under review)](https://www.patreon.com/PassTransport)
