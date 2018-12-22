@@ -1,5 +1,5 @@
 # Pass
-An open-source electronic public transport ticket system.
+An open-source public transport e-ticket system.
 
 **Public demo coming in a few months, stay tuned!**
 
@@ -9,18 +9,18 @@ An open-source electronic public transport ticket system.
 ![Pass banner with slogan](https://github.com/dandesz198/pass/blob/master/assets/Banner%20-%20with%20slogan.png?raw=true)
 
 ## What's this about?
-Budapest already tried to accomplish creating a system like MetroCard or Oyster several times with projects like Electra or RIGO, but they failed every time. The main goal of this project is to create an open-source electronic ticket system that's suitable for cities.
+Budapest already tried to accomplish creating a system like MetroCard or Oyster several times with projects like Electra or RIGO, but they failed every time. The main goal of this project is to create an open-source e-ticket system that's suitable for cities.
 
 ## Are you serious?
 Yes, totally. Also, it's our school project, so we are definietly going to work on this consistently so that we don't get a bad grade.
 
 ## Main goals
-* *Phase 1* Develop a QR-code based electronic public transport ticket and pass system
+* *Phase 1* Develop a QR-code based e-ticket and pass system
 * *Phase 2* Add support for NFC inspecting with phone and cards
   * Possibly build a demo with an NFC card
 * *Phase 3* Add support for prepaid-type accounts
 * *Phase 4* Get a city to use this system
-  * We'll probably need support for the Hungarian electronic ID card system (via NFC, maybe) so that we match with the government's main goals for e-ticket systems
+  * We'll probably need support for the Hungarian e-ID card system (via NFC, maybe) so that we match with the government's main goals for e-ticket systems
 * *Phase 5* Add advanced data analysis and reporting tools to the admin panel
 
 ## While developing, try to keep an eye on
