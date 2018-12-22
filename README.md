@@ -35,9 +35,8 @@ Yes, totally. Also, it's our school project, so we are definietly going to work 
 * **If you found a bug,** create an `Issue` or create a card on our Trello board in the `Bugs` column.
 * **For feature requests**, drop us a line or create a card in the `Features` column.
 
-## Main contributors
+## Contributors
 * @dandesz198 [Facebook](https://fb.me/dandesz198) [Blog](https://blog.risingstack.com/author/danielg/)
-* @daniellesti [Facebook](https://fb.me/lestid) [Twitter](https://twitter.com/lesti_dnl)
 * @hajdupetke [Facebook](https://fb.me/hajdupetke) [Twitter](https://twitter.com/hajdupetke)
 
 ## Resources
