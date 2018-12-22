@@ -1,8 +1,8 @@
-import React, { Component } from "react";
-import { view } from "react-stax";
-import QrReader from "react-qr-reader";
-import inspectorStore from "../stores/inspector";
-import styled from "styled-components";
+import React, { Component } from 'react';
+import { view } from 'react-stax';
+import QrReader from 'react-qr-reader';
+import styled from 'styled-components';
+import inspectorStore from '../stores/inspector';
 
 const Container = styled.div`
   display: flex;
@@ -11,19 +11,19 @@ const Container = styled.div`
 `;
 
 const readerStyle = {
-  height: "100vw",
-  width: "100vw",
-  display: "flex",
-  justifyContent: "center"
+  height: '100vw',
+  width: '100vw',
+  display: 'flex',
+  justifyContent: 'center',
 };
 
 class Inspector extends Component {
-  handleScan = data => {
-    data && alert(data);
+  handleScan = (data) => {
+    if (data) alert(data);
     inspectorStore.value = data;
   };
 
-  handleErr = err => {
+  handleErr = (err) => {
     inspectorStore.value = err;
   };
 
