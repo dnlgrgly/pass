@@ -11,14 +11,15 @@ const Container = styled.div`
 `;
 
 const readerStyle = {
-  height: "100vh",
+  height: "100vw",
   width: "100vw",
   display: "flex",
   justifyContent: "center"
 };
 class Inspector extends Component {
   handleScan = data => {
-    qrcodeStore.value = data;
+    data && alert(data);
+    data ? (qrcodeStore.value = data) : (qrcodeStore.value = "");
   };
   handleErr = err => {
     qrcodeStore.value = err;
