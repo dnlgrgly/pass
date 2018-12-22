@@ -1,8 +1,8 @@
-const db = require("./db");
-const { hash, compare } = require("../utils/hash");
-const { throw400, checkDuplicates } = require("../utils/errors");
+const db = require('./db');
+const { hash, compare } = require('../utils/hash');
+const { throw400, checkDuplicates } = require('../utils/errors');
 
-const collectionName = "users";
+const collectionName = 'users';
 
 async function search() {
   return db
@@ -26,13 +26,13 @@ async function login({ email, password }) {
 
   if (!user) {
     throw400({
-      msg: "No matching email found"
+      msg: 'No matching email found'
     });
   }
 
   if (!compare(password, user.password)) {
     throw400({
-      msg: "Incorrect password"
+      msg: 'Incorrect password'
     });
   }
 
@@ -41,19 +41,21 @@ async function login({ email, password }) {
   return user;
 }
 
-async function register({ email, password, name, id }) {
+async function register({
+  email, password, name, id
+}) {
   // hash the user password before storing it
   password = hash(password);
 
-  const user = { email, name, password, id };
+  const user = {
+    email, name, password, id
+  };
   await db
     .collection(collectionName)
     .insertOne(user)
-    .catch(err =>
-      checkDuplicates(err, {
-        email: "This email is already taken"
-      })
-    );
+    .catch(err => checkDuplicates(err, {
+      email: 'This email is already taken'
+    }));
 
   // do not include the password in the response
   user.password = undefined;
@@ -63,18 +65,16 @@ async function register({ email, password, name, id }) {
 async function update({ id, data }) {
   await db
     .collection(collectionName)
-    .updateOne({ id: id }, { $set: data })
-    .catch(err =>
-      checkDuplicates(err, {
-        email: "This email is already taken"
-      })
-    );
+    .updateOne({ id }, { $set: data })
+    .catch(err => checkDuplicates(err, {
+      email: 'This email is already taken'
+    }));
   return data;
 }
 
 async function deleteById({ id }) {
-  await db.collection(collectionName).remove({ id: id });
-  return "Success!";
+  await db.collection(collectionName).remove({ id });
+  return 'Success!';
 }
 
 module.exports = {
