@@ -24,6 +24,7 @@ Yes, totally. Also, it's our school project, so we are definietly going to work 
 * Consistent, `camelCased` naming
 * Avoiding code or feature duplication
 * Avoiding dependency hell, use as few dependencies as possible
+* Security, because it's a must: we are trying to get a *real* city to use this system, thus we need to try to live up to some privacy and security standards.
 
 ## How can I contribute?
 * **If you want to help in development,** you can grab cards from our [Trello board](https://trello.com/b/QhJUPS7o/pass). *Feel free to [drop a line](mailto:daniel.gergely@risingstack.com) if you want to be a member of the board*
@@ -40,5 +41,10 @@ Yes, totally. Also, it's our school project, so we are definietly going to work 
 
 [Branding assets and stuff (Adobe XD)](https://xd.adobe.com/spec/9dcdf89b-04bb-4434-4c9d-3ba40da735e6-ebfc/)
 
+[react-stax documentation](https://http://react-stax.now.sh)
+
+## Bug bounty!
+Once we'll have enough money from donations, we'll try to host a bug bounty event, mainly focused on security issues.
+
 ## Support us!
-If you want to support our hard work with money, you can [donate to us via PayPal](https://paypal.me/dandesz198)
+If you want to support our hard work, pay for the infrastucture, or donate for a bug bounty event, you can [donate to us via PayPal](https://paypal.me/dandesz198)
