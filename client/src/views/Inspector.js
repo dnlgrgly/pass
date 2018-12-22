@@ -1,13 +1,44 @@
-import React, { Component } from 'react';
-import { view } from 'react-stax';
+import React, { Component } from "react";
+import { view } from "react-stax";
+import QrReader from "react-qr-reader";
+import inspectorStore from "../stores/inspector";
+import styled from "styled-components";
+
+const Container = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+const readerStyle = {
+  height: "100vw",
+  width: "100vw",
+  display: "flex",
+  justifyContent: "center"
+};
 
 class Inspector extends Component {
-  componentDidMount() {
-    // this componentDidMount is only here temporarily
-  }
+  handleScan = data => {
+    data && alert(data);
+    inspectorStore.value = data;
+  };
+
+  handleErr = err => {
+    inspectorStore.value = err;
+  };
 
   render() {
-    return <h1>Inspector page</h1>;
+    return (
+      <Container>
+        <QrReader
+          style={readerStyle}
+          onError={this.handleErr}
+          constraints={{ torch: true }}
+          onScan={this.handleScan}
+          facingMode="environment"
+        />
+      </Container>
+    );
   }
 }
 
