@@ -5,12 +5,16 @@
   "main": "index.js",
   "scripts": {
     "start": "concurrently \"cd backend && yarn start\" \"cd client && yarn start\"",
-    "depinit": "yarn && concurrently \"cd backend && yarn\" \"cd client && yarn\""
+    "depinit": "yarn && concurrently \"cd backend && yarn\" \"cd client && yarn\"",
+    "precommit": "concurrently \"cd backend && eslint\" \"cd client && eslint\""
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "dependencies": {
     "concurrently": "^4.0.1"
+  },
+  "devDependencies": {
+    "husky": "^1.2.1"
   }
 }
