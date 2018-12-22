@@ -44,7 +44,7 @@ Yes, totally. Also, it's our school project, so we are definietly going to work 
 [react-stax documentation](https://http://react-stax.now.sh)
 
 ## Bug bounty!
-Once we'll have enough money from donations, we'll try to host a bug bounty event, mainly focuses on security issues.
+Once we'll have enough money from donations, we'll try to host a bug bounty event, mainly focused on security issues.
 
 ## Support us!
-If you want to support our hard work with money, you can [donate to us via PayPal](https://paypal.me/dandesz198)
+If you want to support our hard work, paying infrastucture, or donate for a bug bounty event, you can [donate to us via PayPal](https://paypal.me/dandesz198)
