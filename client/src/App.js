@@ -1,10 +1,10 @@
-import React, { Component } from "react";
-import { Router } from "react-stax";
-import "./App.css";
-import Home from "./views/Home";
-import Inspector from "./views/Inspector";
-import styled from "styled-components";
-import img from "./assets/bg.png";
+import React, { Component } from 'react';
+import { Router } from 'react-stax';
+import './App.css';
+import styled from 'styled-components';
+import Home from './views/Home';
+import Inspector from './views/Inspector';
+import img from './assets/bg.png';
 
 const Container = styled.div`
   background-image: url(${img});

@@ -1,7 +1,8 @@
-import React, { Component, Fragment } from "react";
-import { view } from "react-stax";
-import { PassCard } from "../components";
-import styled from "styled-components";
+import React, { Component } from 'react';
+import { view } from 'react-stax';
+import styled from 'styled-components';
+import { PassCard } from '../components';
+import Logo from '../assets/logo_trans.png';
 
 const Container = styled.div`
   padding: 5vh 5vw;
@@ -52,11 +53,14 @@ const Image = styled.img`
 `;
 
 class Home extends Component {
+  componentDidMount() {
+    // this componentDidMount is only here temporarily
+  }
 
   render() {
     return (
       <Container>
-        <Image alt="Logo" src={require("../assets/logo_trans.png")} />
+        <Image alt="Logo" src={Logo} />
         <Heading>Pass.</Heading>
         <Miniheading>
           Purchase and manage your Budapest-area tickets online with ease.

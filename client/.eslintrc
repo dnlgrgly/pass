@@ -1,0 +1,12 @@
+{
+    "extends": "airbnb",
+    "env": {
+        "browser": true
+    },
+    "rules": {
+        "react/jsx-filename-extension": [0],
+        "no-param-reassign": "off",
+        "react/prefer-stateless-function": [1],
+        "import/prefer-default-export": [0]
+    }
+}

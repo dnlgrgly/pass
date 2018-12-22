@@ -1,5 +1,5 @@
-import { storage } from "react-stax";
-import api from "./api";
+import { storage } from 'react-stax';
+import api from './api';
 
 function processUser(data) {
   api.defaults.headers.Authorization = `Bearer ${data.token}`;
@@ -8,19 +8,19 @@ function processUser(data) {
 }
 
 export async function getMe() {
-  const { data } = await api.get('/users/me')
-  return data
+  const { data } = await api.get('/users/me');
+  return data;
 }
 
 // body: { email, password }
 export async function login(body) {
-  const { data } = await api.post(`/login`, body);
+  const { data } = await api.post('/login', body);
   return processUser(data);
 }
 
 // body: { email, password, name, id }
 export async function register(body) {
-  const { data } = await api.post("/register", body);
+  const { data } = await api.post('/register', body);
   return processUser(data);
 }
 
