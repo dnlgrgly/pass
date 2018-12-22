@@ -52,6 +52,7 @@ const Image = styled.img`
 `;
 
 class Home extends Component {
+
   render() {
     return (
       <Container>
