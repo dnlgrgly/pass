@@ -31,6 +31,7 @@ class Inspector extends Component {
         <QrReader
           style={readerStyle}
           onError={this.handleErr}
+          constraints={{ torch: true }}
           onScan={this.handleScan}
           facingMode="environment"
         />
