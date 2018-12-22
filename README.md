@@ -4,6 +4,7 @@ An open-source public transport e-ticket system.
 **Public demo coming in a few months, stay tuned!**
 
 * [Follow us on Facebook](https://www.facebook.com/PassTransport)
+* [Follow us on Twitter](https://twitter.com/PassTransport)
 * [Donate on Patreon](https://www.patreon.com/PassTransport)
 
 ![Pass banner with slogan](https://github.com/dandesz198/pass/blob/master/assets/Banner%20-%20with%20slogan.png?raw=true)
