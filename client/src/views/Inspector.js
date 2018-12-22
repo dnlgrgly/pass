@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { view } from "react-stax";
 import QrReader from "react-qr-reader";
-import qrcodeStore from "../stores/qrcode";
+import inspectorStore from "../stores/inspector";
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -20,10 +20,10 @@ const readerStyle = {
 class Inspector extends Component {
   handleScan = data => {
     data && alert(data)
-    qrcodeStore.value = data;
+    inspectorStore.value = data;
   };
   handleErr = err => {
-    qrcodeStore.value = err;
+    inspectorStore.value = err;
   };
   render() {
     return (
