@@ -6,7 +6,7 @@
   "scripts": {
     "start": "concurrently \"cd backend && yarn start\" \"cd client && yarn start\"",
     "depinit": "yarn && concurrently \"cd backend && yarn\" \"cd client && yarn\"",
-    "precommit": "concurrently \"cd backend && eslint\" \"cd client && eslint\""
+    "precommit": "concurrently \"cd backend && eslint */*.js --fix\" \"cd client && eslint src/*.js --fix\""
   },
   "keywords": [],
   "author": "",
