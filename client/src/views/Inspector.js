@@ -22,9 +22,11 @@ class Inspector extends Component {
     data && alert(data);
     inspectorStore.value = data;
   };
+
   handleErr = err => {
     inspectorStore.value = err;
   };
+
   render() {
     return (
       <Container>

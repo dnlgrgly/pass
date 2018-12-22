@@ -1,4 +1,4 @@
-const joi = require("joi");
+const joi = require('joi');
 
 const envSchema = joi.attempt(
   process.env,
@@ -15,7 +15,7 @@ const envSchema = joi.attempt(
         .required(),
       DB_URI: joi
         .string()
-        .uri({ scheme: "mongodb" })
+        .uri({ scheme: 'mongodb' })
         .required(),
       DB_NAME: joi.string().required(),
       DB_POOL_SIZE: joi
@@ -26,11 +26,11 @@ const envSchema = joi.attempt(
         .required(),
       LOG_LEVEL: joi
         .string()
-        .valid("none", "error", "warn", "info", "verbose", "debug", "silly")
+        .valid('none', 'error', 'warn', 'info', 'verbose', 'debug', 'silly')
         .required(),
       HTTP_LOG_FORMAT: joi
         .string()
-        .valid("combined", "common", "dev", "short", "tiny", "none")
+        .valid('combined', 'common', 'dev', 'short', 'tiny', 'none')
         .required()
     })
     .unknown()

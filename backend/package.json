@@ -4,22 +4,25 @@
   "description": "",
   "main": "web/server.js",
   "scripts": {
-    "start": "node web/index.js",
+    "start": "NODE_ENV=dev nodemon web/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^3.0.2",
     "body-parser": "^1.18.3",
     "boom": "^7.2.2",
     "cors": "^2.8.5",
     "crypto": "^1.0.1",
     "dotenv": "^6.1.0",
     "es6-promisify": "^6.0.1",
+    "eslint-config-airbnb": "^17.1.0",
     "express": "^4.16.4",
     "helmet": "^3.15.0",
     "http": "^0.0.0",
     "joi": "^14.0.6",
+    "jsonwebtoken": "^8.4.0",
     "mongodb": "^3.1.9",
     "mongoose": "^5.3.10",
     "morgan": "^1.9.1",
@@ -28,6 +31,10 @@
     "winston": "^3.1.0"
   },
   "devDependencies": {
+    "eslint": "^5.10.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "nodemon": "^1.18.9",
     "prettier": "1.15.2"
   }
 }

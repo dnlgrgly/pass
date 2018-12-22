@@ -1,9 +1,11 @@
-import React, { Component, Fragment } from "react";
-import { view } from "react-stax";
-import styled from "styled-components";
-import PropTypes from "prop-types";
-import colorPresets from "./colorPresets";
-import iconPresets from "./iconPresets";
+import React, { Component } from 'react';
+import { view } from 'react-stax';
+import styled from 'styled-components';
+import PropTypes from 'prop-types';
+import colorPresets from './colorPresets';
+
+// Icons
+import PersonIcon from '../assets/person.png';
 
 const Container = styled.div`
   position: relative;
@@ -13,10 +15,9 @@ const Container = styled.div`
   max-height: 198px;
   border-radius: 15px;
   box-shadow: 0 2.5px 15px #999;
-  background-image: ${({ type }) =>
-    `linear-gradient(to bottom right, ${colorPresets[type][0]}, ${
-      colorPresets[type][1]
-    })`};
+  background-image: ${({ type }) => `linear-gradient(to bottom right, ${colorPresets[type][0]}, ${
+    colorPresets[type][1]
+  })`};
   color: #fff;
   padding: 1.25em !important;
   margin: 0 1em 0 0 !important;
@@ -38,22 +39,25 @@ const Image = styled.img`
   max-width: 2cm;
   margin-bottom: 0.5vw !important;
 `;
+
+const getIcon = (type) => {
+  switch (type) {
+    case 'private':
+      return PersonIcon;
+    case 'business':
+      return PersonIcon;
+    case 'pupil':
+      return PersonIcon;
+    case 'student':
+      return PersonIcon;
+    default:
+      return PersonIcon;
+  }
+};
+
 class PassCard extends Component {
-  getIcon(type) {
-    switch (type) {
-      case "private":
-        return require("../assets/person.png");
-      case "business":
-        return require("../assets/person.png");
-      case "pupil":
-        return require("../assets/person.png");
-      case "student":
-        return require("../assets/person.png");
-      case "bubi":
-        return require("../assets/bubi.png");
-      default:
-        return require("../assets/person.png");
-    }
+  componentDidMount() {
+    // this componentDidMount is only here temporarily
   }
 
   render() {
@@ -61,17 +65,17 @@ class PassCard extends Component {
 
     return (
       <Container type={type}>
-        <Image alt="Logo" src={this.getIcon(type)} />
+        <Image alt="Logo" src={getIcon(type)} />
         <Text>Monthly Budapest-pass</Text>
-        <Text style={{ position: "absolute", bottom: 15 }}>9500 HUF</Text>
+        <Text style={{ position: 'absolute', bottom: 15 }}>9500 HUF</Text>
       </Container>
     );
   }
 }
 
 PassCard.propTypes = {
-  type: PropTypes.oneOf(["private", "business", "pupil", "student", "bubi"])
-    .isRequired
+  type: PropTypes.oneOf(['private', 'business', 'pupil', 'student', 'bubi'])
+    .isRequired,
 };
 
 export default view(PassCard);

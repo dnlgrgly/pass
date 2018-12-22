@@ -1,0 +1,15 @@
+{
+  "extends": "airbnb-base",
+  "env": {
+    "node": true
+  },
+  "rules": {
+    "brace-style": ["error", "stroustrup"],
+    "comma-dangle": ["error", "never"],
+    "no-unused-vars": ["warn"],
+    "no-var": ["off"],
+    "one-var": ["off"],
+    "global-require": [0],
+    "no-param-reassign": [1]
+  }
+}

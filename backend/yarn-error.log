@@ -1,0 +1,66 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/Cellar/yarn/1.6.0/libexec/bin/yarn.js
+
+PATH: 
+  /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Users/gergelydaniel/Library/Android/sdk/tools:/Users/gergelydaniel/Library/Android/sdk/tools/bin:/Users/gergelydaniel/Library/Android/sdk/platform-tools:/Users/gergelydaniel/Library/Android/sdk/tools:/Users/gergelydaniel/Library/Android/sdk/tools/bin:/Users/gergelydaniel/Library/Android/sdk/platform-tools
+
+Yarn version: 
+  1.6.0
+
+Node version: 
+  8.11.1
+
+Platform: 
+  darwin x64
+
+Trace: 
+  SyntaxError: /Users/gergelydaniel/Documents/GitHub/pass/package.json: Unexpected token } in JSON at position 455
+      at JSON.parse (<anonymous>)
+      at /usr/local/Cellar/yarn/1.6.0/libexec/lib/cli.js:1130:59
+      at Generator.next (<anonymous>)
+      at step (/usr/local/Cellar/yarn/1.6.0/libexec/lib/cli.js:98:30)
+      at /usr/local/Cellar/yarn/1.6.0/libexec/lib/cli.js:109:13
+      at <anonymous>
+
+npm manifest: 
+  {
+    "name": "backend",
+    "version": "1.0.0",
+    "description": "",
+    "main": "web/server.js",
+    "scripts": {
+      "start": "NODE_ENV=dev nodemon web/index.js",
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "bcrypt": "^3.0.2",
+      "body-parser": "^1.18.3",
+      "boom": "^7.2.2",
+      "cors": "^2.8.5",
+      "crypto": "^1.0.1",
+      "dotenv": "^6.1.0",
+      "es6-promisify": "^6.0.1",
+      "express": "^4.16.4",
+      "helmet": "^3.15.0",
+      "http": "^0.0.0",
+      "joi": "^14.0.6",
+      "mongodb": "^3.1.9",
+      "mongoose": "^5.3.10",
+      "morgan": "^1.9.1",
+      "passport": "^0.4.0",
+      "passport-jwt": "^4.0.0",
+      "winston": "^3.1.0"
+    },
+    "devDependencies": {
+      "nodemon": "^1.18.9",
+      "prettier": "1.15.2"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

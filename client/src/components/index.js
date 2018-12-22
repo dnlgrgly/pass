@@ -1,1 +1,1 @@
-export { default as PassCard } from './PassCard'
+export { default as PassCard } from './PassCard';
