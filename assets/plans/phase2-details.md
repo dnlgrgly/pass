@@ -3,6 +3,9 @@
 # Detailed execution plan for Phase 2 - NFC system, implement BKK pass types (e.g. special pricing over the border of Budapest on specific lines)
 
 ## User-facing features
+
 ## Screens
+
 ## Backend
+
 ## Hardware needs for cities
