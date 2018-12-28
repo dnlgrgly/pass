@@ -2,14 +2,14 @@
 
 # Detailed execution plan for Phase 1 - QR code based pass system
 
-## User-facing features
+## User-facing features
 * Basic auth (register, login, forgot password, etc.)
 * Basic pass flow (browse and purchase passes, be able to hand over the pass to the inspector/access gates for validation)
 
 ## Screens
 The same as defined in [Daniel Korpai's conpect](https://szifon.com/2017/07/30/bkk-online-shop-design-koncepcio/)
 
-## Backend
+## Backend
 
 ### Models
 
@@ -148,7 +148,7 @@ This endpoint can be used to validate the ticket or pass by the inspector
 ```
 
 
-## Hardware needs for cities
+## Hardware needs for cities
 * A smartphone with an NFC reader and camera for every inspector that can access internet
   * The OS does not matter as the inspection is PWA-based
 
