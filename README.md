@@ -7,7 +7,7 @@ An open-source public transport e-ticket system.
 * [Follow us on Twitter](https://twitter.com/PassTransport)
 * [Donate on Patreon](https://www.patreon.com/PassTransport)
 
-![Pass banner with slogan](https://github.com/dandesz198/pass/blob/master/assets/Banner%20-%20with%20slogan.png?raw=true)
+![Pass banner with slogan](https://github.com/dandesz198/pass/blob/master/assets/design/Banner%20-%20with%20slogan.png?raw=true)
 
 ## What's this about?
 Budapest already tried to accomplish creating a system like MetroCard or Oyster several times with projects like Electra or RIGO, but they failed every time. The main goal of this project is to create an open-source e-ticket system that's suitable for cities.
@@ -16,11 +16,11 @@ Budapest already tried to accomplish creating a system like MetroCard or Oyster 
 Yes, totally. Also, it's our school project, so we are definietly going to work on this consistently so that we don't get a bad grade.
 
 ## Main goals
-* *Phase 1* Develop a QR-code based e-ticket and pass system (feature set like BKK Online Shop) [Execution details](/phase1-details.md)
-* *Phase 2* Add support for NFC inspecting with phone and cards (feature set like BKK Rigo) [Execution details](/phase2-details.md)
+* *Phase 1* Develop a QR-code based e-ticket and pass system (feature set like BKK Online Shop) [Execution details](/assets/plans/phase1-details.md)
+* *Phase 2* Add support for NFC inspecting with phone and cards (feature set like BKK Rigo) [Execution details](/assets/plans/phase2-details.md)
   * Possibly build a demo with an NFC card
-* *Phase 3* Add support for prepaid-type accounts (like MTA (NYC) MetroCard) [Execution details](/phase3-details.md)
-* *Phase 4* Get a city to use this system [Implementation plan for cities](/phase4-details.md)
+* *Phase 3* Add support for prepaid-type accounts (like MTA (NYC) MetroCard) [Execution details](/assets/plans/phase3-details.md)
+* *Phase 4* Get a city to use this system [Implementation plan for cities](/assets/plans/phase4-details.md)
   * We'll probably need support for the Hungarian e-ID card system (via NFC) so that we match with the government's main goals
 * *Phase 5* Add advanced data analysis and reporting tools to the admin panel
 
