@@ -16,12 +16,12 @@ Budapest already tried to accomplish creating a system like MetroCard or Oyster 
 Yes, totally. Also, it's our school project, so we are definietly going to work on this consistently so that we don't get a bad grade.
 
 ## Main goals
-* *Phase 1* Develop a QR-code based e-ticket and pass system
-* *Phase 2* Add support for NFC inspecting with phone and cards
+* *Phase 1* Develop a QR-code based e-ticket and pass system (feature set like BKK Online Shop) [Execution details](/phase1-details.md)
+* *Phase 2* Add support for NFC inspecting with phone and cards (feature set like BKK Rigo) [Execution details](/phase2-details.md)
   * Possibly build a demo with an NFC card
-* *Phase 3* Add support for prepaid-type accounts
-* *Phase 4* Get a city to use this system
-  * We'll probably need support for the Hungarian e-ID card system (via NFC, maybe) so that we match with the government's main goals for e-ticket systems
+* *Phase 3* Add support for prepaid-type accounts (like MTA (NYC) MetroCard) [Execution details](/phase3-details.md)
+* *Phase 4* Get a city to use this system [Implementation plan for cities](/phase4-details.md)
+  * We'll probably need support for the Hungarian e-ID card system (via NFC) so that we match with the government's main goals
 * *Phase 5* Add advanced data analysis and reporting tools to the admin panel
 
 ## While developing, try to keep an eye on
