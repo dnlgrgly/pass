@@ -1,4 +1,4 @@
-import { store } from "react-stax";
+import { store } from 'react-stax';
 
 const inspector = store({ value: null });
 

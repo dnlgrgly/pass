@@ -4,11 +4,8 @@ import './App.css';
 import styled from 'styled-components';
 import Home from './views/Home';
 import Inspector from './views/Inspector';
-import img from './assets/bg.png';
 
 const Container = styled.div`
-  background-image: url(${img});
-  background-repeat: no-repeat;
   background-color: #eee;
 `;
 

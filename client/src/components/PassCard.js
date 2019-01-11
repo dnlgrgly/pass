@@ -15,9 +15,7 @@ const Container = styled.div`
   max-height: 198px;
   border-radius: 15px;
   box-shadow: 0 2.5px 15px #999;
-  background-image: ${({ type }) => `linear-gradient(to bottom right, ${colorPresets[type][0]}, ${
-    colorPresets[type][1]
-  })`};
+  background-image: ${({ type }) => `linear-gradient(to bottom right, ${colorPresets[type][0]}, ${colorPresets[type][1]})`};
   color: #fff;
   padding: 1.25em !important;
   margin: 0 1em 0 0 !important;
@@ -40,7 +38,7 @@ const Image = styled.img`
   margin-bottom: 0.5vw !important;
 `;
 
-const getIcon = (type) => {
+const getIcon = type => {
   switch (type) {
     case 'private':
       return PersonIcon;
@@ -61,21 +59,26 @@ class PassCard extends Component {
   }
 
   render() {
-    const { type } = this.props;
-
+    const {
+      id, passType, name, price, validity, limitDist
+    } = this.props;
     return (
-      <Container type={type}>
-        <Image alt="Logo" src={getIcon(type)} />
-        <Text>Monthly Budapest-pass</Text>
-        <Text style={{ position: 'absolute', bottom: 15 }}>9500 HUF</Text>
+      <Container type={passType} key={id}>
+        <Image alt="Logo" src={getIcon(passType)} />
+        <Text>{name.en}</Text>
+        <Text style={{ position: 'absolute', bottom: 15 }}>{`${price} HUF`}</Text>
       </Container>
     );
   }
 }
 
 PassCard.propTypes = {
-  type: PropTypes.oneOf(['private', 'business', 'pupil', 'student', 'bubi'])
-    .isRequired,
+  id: PropTypes.string.isRequired,
+  passType: PropTypes.string.isRequired,
+  name: PropTypes.objectOf(PropTypes.string).isRequired,
+  price: PropTypes.number.isRequired,
+  validity: PropTypes.objectOf(PropTypes.number).isRequired,
+  limitDist: PropTypes.number.isRequired,
 };
 
 export default view(PassCard);
