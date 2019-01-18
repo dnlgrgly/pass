@@ -4,6 +4,7 @@ import './App.css';
 import styled from 'styled-components';
 import Home from './views/Home';
 import Inspector from './views/Inspector';
+import Details from './views/Details';
 
 const Container = styled.div`
   background-color: #eee;
@@ -16,6 +17,7 @@ class App extends Component {
         <Router defaultPage="/">
           <Home page="/" />
           <Inspector page="inspector" />
+          <Details page="pass-details" />
         </Router>
       </Container>
     );

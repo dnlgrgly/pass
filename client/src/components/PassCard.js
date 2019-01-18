@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { view } from 'react-stax';
+import { route, view } from 'react-stax';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import colorPresets from './colorPresets';
@@ -20,11 +20,11 @@ const Container = styled.div`
   padding: 1.25em !important;
   margin: 0 1em 0 0 !important;
   transition: all 0.2s ease-in-out;
-  :hover {
+  /* :hover {
     margin-top: -0.5em !important;
     box-shadow: ${({ type }) => `0 5px 2.5px ${colorPresets[type][1]}`};
     transition: all 0.1s ease-in-out;
-  }
+  } */
 `;
 
 const Text = styled.h1`
@@ -63,7 +63,7 @@ class PassCard extends Component {
       id, passType, name, price, validity, limitDist
     } = this.props;
     return (
-      <Container type={passType} key={id}>
+      <Container type={passType} key={id} onClick={() => route({ to: 'pass-details', params: this.props })}>
         <Image alt="Logo" src={getIcon(passType)} />
         <Text>{name.en}</Text>
         <Text style={{ position: 'absolute', bottom: 15 }}>{`${price} HUF`}</Text>
