@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { view, params } from 'react-stax';
 import styled from 'styled-components';
 import { PassCard } from '../components';
-import Logo from '../assets/logo_trans.png';
+import LogoIcon from '../assets/logo_trans.png';
 import ticketStore from '../stores/ticket';
 
 const Container = styled.div`
@@ -16,16 +16,16 @@ const Container = styled.div`
   }
 `;
 
-const Heading = styled.h1`
-  font-size: 3em;
-  color: #222;
-  font-weight: 800;
-  margin-top: 0;
-`;
-
-const Image = styled.img`
+const Logo = styled.img`
   width: 30vw;
   max-width: 4cm;
+`;
+
+const Heading = styled.h1`
+  font-size: 2.5em;
+  color: #222;
+  font-weight: 800;
+  margin: 10px 0;
 `;
 
 class Details extends Component {
@@ -41,8 +41,8 @@ class Details extends Component {
     const { id, type } = this.state;
     return (
       <Container>
-        <Image alt="Logo" src={Logo} />
-        <Heading>Pass.</Heading>
+        <Logo alt="Logo" src={LogoIcon} />
+        <Heading>Ticket details</Heading>
         {type && <PassCard mini {...type} key={id} passType={ticketStore.getType(type)} />}
       </Container>
     );

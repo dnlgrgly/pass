@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { view } from 'react-stax';
 import styled from 'styled-components';
 import { PassCard } from '../components';
-import Logo from '../assets/logo_trans.png';
+import LogoIcon from '../assets/logo_trans.png';
 import ticketStore from '../stores/ticket';
 
 const Container = styled.div`
@@ -48,7 +48,7 @@ const VerticalDrawer = styled.div`
   }
 `;
 
-const Image = styled.img`
+const Logo = styled.img`
   width: 30vw;
   max-width: 4cm;
 `;
@@ -61,7 +61,7 @@ class Home extends Component {
   render() {
     return (
       <Container>
-        <Image alt="Logo" src={Logo} />
+        <Logo alt="Logo" src={LogoIcon} />
         <Heading>Pass.</Heading>
         <Miniheading>Purchase and manage your Budapest-area tickets online with ease.</Miniheading>
         <Subheading>Most popular</Subheading>
