@@ -10,6 +10,10 @@ const tickets = store({
       },
       price: 9500,
       validity: { minutes: 0, days: 30 },
+      validWith: {
+        en: 'any personal ID',
+        hu: 'bármilyen azonosításra alkalmas okmánnyal',
+      },
       limitDist: 0,
     },
     {
@@ -20,6 +24,10 @@ const tickets = store({
       },
       price: 3450,
       validity: { minutes: 0, days: 30 },
+      validWith: {
+        en: 'Hungarian student ID',
+        hu: 'magyar diákigazolvánnyal',
+      },
       limitDist: 0,
     },
     {
@@ -30,6 +38,10 @@ const tickets = store({
       },
       price: 10500,
       validity: { minutes: 0, days: 30 },
+      validWith: {
+        en: 'any personal ID',
+        hu: 'bármilyen azonosításra alkalmas okmánnyal',
+      },
       limitDist: 0,
     },
     {
@@ -40,6 +52,10 @@ const tickets = store({
       },
       price: 6300,
       validity: { minutes: 0, days: 15 },
+      validWith: {
+        en: 'any personal ID',
+        hu: 'bármilyen azonosításra alkalmas okmánnyal',
+      },
       limitDist: 0,
     },
     {
@@ -50,6 +66,10 @@ const tickets = store({
       },
       price: 2300,
       validity: { minutes: 0, days: 15 },
+      validWith: {
+        en: 'Hungarian student ID',
+        hu: 'magyar diákigazolvánnyal',
+      },
       limitDist: 0,
     },
     {
@@ -60,6 +80,10 @@ const tickets = store({
       },
       price: 7000,
       validity: { minutes: 0, days: 15 },
+      validWith: {
+        en: 'any personal ID',
+        hu: 'bármilyen azonosításra alkalmas okmánnyal',
+      },
       limitDist: 0,
     },
     {
@@ -70,6 +94,10 @@ const tickets = store({
       },
       price: 28500,
       validity: { minutes: 0, days: 90 },
+      validWith: {
+        en: 'any personal ID',
+        hu: 'bármilyen azonosításra alkalmas okmánnyal',
+      },
       limitDist: 0,
     },
     {
@@ -80,6 +108,10 @@ const tickets = store({
       },
       price: 10350,
       validity: { minutes: 0, days: 90 },
+      validWith: {
+        en: 'Hungarian student ID',
+        hu: 'magyar diákigazolvánnyal',
+      },
       limitDist: 0,
     },
     {
@@ -90,6 +122,10 @@ const tickets = store({
       },
       price: 31500,
       validity: { minutes: 0, days: 90 },
+      validWith: {
+        en: 'any personal ID',
+        hu: 'bármilyen azonosításra alkalmas okmánnyal',
+      },
       limitDist: 0,
     },
   ],

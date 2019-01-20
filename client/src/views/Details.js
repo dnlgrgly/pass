@@ -28,6 +28,19 @@ const Heading = styled.h1`
   margin: 10px 0;
 `;
 
+const Title = styled.h2`
+  font-size: 1.5em;
+  color: #444;
+  font-weight: 400;
+  margin-top: 1em;
+`;
+
+const Detail = styled.h2`
+  font-size: 2em;
+  color: #222;
+  font-weight: 800;
+`;
+
 class Details extends Component {
   state = {};
 
@@ -39,11 +52,18 @@ class Details extends Component {
 
   render() {
     const { id, type } = this.state;
+    if (!type) { return null; }
     return (
       <Container>
         <Logo alt="Logo" src={LogoIcon} />
         <Heading>Ticket details</Heading>
-        {type && <PassCard mini {...type} key={id} passType={ticketStore.getType(type)} />}
+        <PassCard mini {...type} key={id} passType={ticketStore.getType(type)} />
+        <Title>validity</Title>
+        <Detail>{new Date().toDateString()}</Detail>
+        <Title>validity over Budapest border:</Title>
+        <Detail>{`${type.limitDist} km`}</Detail>
+        <Title>only valid with</Title>
+        <Detail>{type.validWith.en}</Detail>
       </Container>
     );
   }
