@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { view, params } from 'react-stax';
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
 import { PassCard } from '../components';
 import Logo from '../assets/logo_trans.png';
 import ticketStore from '../stores/ticket';
@@ -22,31 +21,6 @@ const Heading = styled.h1`
   color: #222;
   font-weight: 800;
   margin-top: 0;
-`;
-
-const Subheading = styled.h2`
-  font-size: 2em;
-  color: #222;
-  font-weight: 800;
-  margin-top: 1em;
-`;
-
-const Miniheading = styled.h2`
-  font-size: 1.5em;
-  color: #555;
-  font-weight: 300;
-`;
-
-const VerticalDrawer = styled.div`
-  margin: 0 -5vw;
-  padding: 1em 5vw;
-  display: flex;
-  flex-direction: row;
-  overflow: scroll;
-  * {
-    flex-grow: 1;
-    flex-shrink: 0;
-  }
 `;
 
 const Image = styled.img`
