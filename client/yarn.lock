@@ -1027,6 +1027,13 @@ alphanum-sort@^1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/alphanum-sort/-/alphanum-sort-1.0.2.tgz#97a1119649b211ad33691d9f9f486a8ec9fbe0a3"
 
+animated@^0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/animated/-/animated-0.2.2.tgz#04af7846ad0b9b8d1f0472cc53d82b8efeb4a751"
+  dependencies:
+    invariant "^2.2.0"
+    normalize-css-color "^1.0.1"
+
 ansi-colors@^3.0.0:
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/ansi-colors/-/ansi-colors-3.2.1.tgz#9638047e4213f3428a11944a7d4b31cba0a3ff95"
@@ -4176,7 +4183,7 @@ internal-ip@^3.0.1:
     default-gateway "^2.6.0"
     ipaddr.js "^1.5.2"
 
-invariant@^2.2.2, invariant@^2.2.4:
+invariant@^2.2.0, invariant@^2.2.2, invariant@^2.2.4:
   version "2.2.4"
   resolved "https://registry.yarnpkg.com/invariant/-/invariant-2.2.4.tgz#610f3c92c9359ce1db616e538008d23ff35158e6"
   dependencies:
@@ -5050,7 +5057,6 @@ jsprim@^1.2.2:
 jsqr@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/jsqr/-/jsqr-1.1.1.tgz#a0d7f95e6c3b0bec913dfef2ca64a877f28ed05f"
-  integrity sha512-FVoMU2ncTyjaOqN/vwvDnZ7jaAVvFzM3LK3vG3jvQZFWJQlAwJ1XTCOgAEKo+4Rkd6ydMXTTvqGV/4w5VunmTw==
 
 jsx-ast-utils@^2.0.1:
   version "2.0.1"
@@ -5731,6 +5737,10 @@ nopt@^4.0.1:
   dependencies:
     abbrev "1"
     osenv "^0.1.4"
+
+normalize-css-color@^1.0.1:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/normalize-css-color/-/normalize-css-color-1.0.2.tgz#02991e97cccec6623fe573afbbf0de6a1f3e9f8d"
 
 normalize-package-data@^2.3.2:
   version "2.4.0"
@@ -7097,7 +7107,6 @@ react-minimalist-portal@^2.3.1:
 react-qr-reader@^2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/react-qr-reader/-/react-qr-reader-2.1.1.tgz#25fdb9812d61f727ef20614342eb54394f8e0ab6"
-  integrity sha512-Xid7aBPZMMl9Xh4mdz9w8HZZsbL1BVbRLuoE2ixs5zwtgF0IGarWZ5cbJVaxCydus6vzEL4FQf4gpItC/jz8hg==
   dependencies:
     jsqr "^1.1.1"
     prop-types "^15.5.8"
@@ -7181,9 +7190,9 @@ react-scripts@2.1.1:
   optionalDependencies:
     fsevents "1.2.4"
 
-react-stax@^0.1.0-alpha.6:
-  version "0.1.0-alpha.6"
-  resolved "https://registry.yarnpkg.com/react-stax/-/react-stax-0.1.0-alpha.6.tgz#9032a89f48005f354e677ee1f1802544ef5a8618"
+react-stax@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/react-stax/-/react-stax-0.1.1.tgz#4e074415bd9593f1240085611e032cda6eca9616"
   dependencies:
     "@nx-js/observer-util" "^4.2.0"
     "@nx-js/queue-util" "^1.1.1"
@@ -7526,7 +7535,6 @@ rsvp@^3.3.3:
 rtcpeerconnection-shim@^1.2.14:
   version "1.2.15"
   resolved "https://registry.yarnpkg.com/rtcpeerconnection-shim/-/rtcpeerconnection-shim-1.2.15.tgz#e7cc189a81b435324c4949aa3dfb51888684b243"
-  integrity sha512-C6DxhXt7bssQ1nHb154lqeL0SXz5Dx4RczXZu2Aa/L1NJFnEVDxFwCBo3fqtuljhHIGceg5JKBV4XJ0gW5JKyw==
   dependencies:
     sdp "^2.6.0"
 
@@ -7623,7 +7631,6 @@ schema-utils@^1.0.0:
 sdp@^2.6.0, sdp@^2.9.0:
   version "2.9.0"
   resolved "https://registry.yarnpkg.com/sdp/-/sdp-2.9.0.tgz#2eed2d9c0b26c81ff87593107895c68d6fb9a0a6"
-  integrity sha512-XAVZQO4qsfzVTHorF49zCpkdxiGmPNjA8ps8RcJGtGP3QJ/A8I9/SVg/QnkAFDMXIyGbHZBBFwYBw6WdnhT96w==
 
 select-hose@^2.0.0:
   version "2.0.0"
@@ -8705,7 +8712,6 @@ webpack@4.19.1:
 webrtc-adapter@^6.4.0:
   version "6.4.8"
   resolved "https://registry.yarnpkg.com/webrtc-adapter/-/webrtc-adapter-6.4.8.tgz#eeca3f0d5b40c0e629b865ef2a936a0b658274de"
-  integrity sha512-YM8yl545c/JhYcjGHgaCoA7jRK/KZuMwEDFeP2AcP0Auv5awEd+gZE0hXy9z7Ed3p9HvAXp8jdbe+4ESb1zxAw==
   dependencies:
     rtcpeerconnection-shim "^1.2.14"
     sdp "^2.9.0"

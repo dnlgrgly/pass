@@ -67,25 +67,25 @@ class Home extends Component {
         <Subheading>Most popular</Subheading>
         <VerticalDrawer>
           {ticketStore.types.map(type => (
-            <PassCard {...type} passType={ticketStore.getType(type)} />
+            <PassCard {...type} key={type.id} passType={ticketStore.getType(type)} />
           ))}
         </VerticalDrawer>
         <Subheading>Full-priced Passes</Subheading>
         <VerticalDrawer>
           {ticketStore.types.filter(pass => pass.id.includes('PERSON')).map(type => (
-            <PassCard {...type} passType={ticketStore.getType(type)} />
+            <PassCard {...type} key={type.id} passType={ticketStore.getType(type)} />
           ))}
         </VerticalDrawer>
         <Subheading>For pupils</Subheading>
         <VerticalDrawer>
           {ticketStore.types.filter(pass => pass.id.includes('PUPIL')).map(type => (
-            <PassCard {...type} passType={ticketStore.getType(type)} />
+            <PassCard {...type} key={type.id} passType={ticketStore.getType(type)} />
           ))}
         </VerticalDrawer>
         <Subheading>For business</Subheading>
         <VerticalDrawer>
           {ticketStore.types.filter(pass => pass.id.includes('BUSINESS')).map(type => (
-            <PassCard {...type} passType={ticketStore.getType(type)} />
+            <PassCard {...type} key={type.id} passType={ticketStore.getType(type)} />
           ))}
         </VerticalDrawer>
       </Container>

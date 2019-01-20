@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { view } from 'react-stax';
+import { view, params } from 'react-stax';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import { PassCard } from '../components';
 import Logo from '../assets/logo_trans.png';
 import ticketStore from '../stores/ticket';
@@ -54,41 +55,21 @@ const Image = styled.img`
 `;
 
 class Details extends Component {
+  state = {};
+
   componentDidMount() {
-    // this componentDidMount is only here temporarily
-    console.log(this);
+    const { id } = params;
+    const type = ticketStore.getTypeById(id);
+    this.setState({ id, type });
   }
 
   render() {
+    const { id, type } = this.state;
     return (
       <Container>
         <Image alt="Logo" src={Logo} />
         <Heading>Pass.</Heading>
-        <Miniheading>Purchase and manage your Budapest-area tickets online with ease.</Miniheading>
-        {/* <Subheading>Most popular</Subheading>
-        <VerticalDrawer>
-          {ticketStore.types.map(type => (
-            <PassCard {...type} passType={ticketStore.getType(type)} />
-          ))}
-        </VerticalDrawer>
-        <Subheading>Full-priced Passes</Subheading>
-        <VerticalDrawer>
-          {ticketStore.types.filter(pass => pass.id.includes('PERSON')).map(type => (
-            <PassCard {...type} passType={ticketStore.getType(type)} />
-          ))}
-        </VerticalDrawer>
-        <Subheading>For pupils</Subheading>
-        <VerticalDrawer>
-          {ticketStore.types.filter(pass => pass.id.includes('PUPIL')).map(type => (
-            <PassCard {...type} passType={ticketStore.getType(type)} />
-          ))}
-        </VerticalDrawer>
-        <Subheading>For business</Subheading>
-        <VerticalDrawer>
-          {ticketStore.types.filter(pass => pass.id.includes('BUSINESS')).map(type => (
-            <PassCard {...type} passType={ticketStore.getType(type)} />
-          ))}
-        </VerticalDrawer> */}
+        {type && <PassCard mini {...type} key={id} passType={ticketStore.getType(type)} />}
       </Container>
     );
   }

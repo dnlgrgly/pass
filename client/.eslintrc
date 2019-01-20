@@ -8,7 +8,8 @@
     "rules": {
         "react/jsx-filename-extension": [0],
         "no-param-reassign": "off",
-        "react/prefer-stateless-function": [1],
+        "react/prefer-stateless-function": [0],
+        "react/destructuring-assignmnent": [0],
         "import/prefer-default-export": [0],
         "linebreak-style": [0],
         "arrow-parens": [0],

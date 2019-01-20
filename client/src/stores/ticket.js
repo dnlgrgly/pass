@@ -1,6 +1,6 @@
 import { store } from 'react-stax';
 
-const inspector = store({
+const tickets = store({
   types: [
     {
       id: '30PERSON',
@@ -62,18 +62,51 @@ const inspector = store({
       validity: { minutes: 0, days: 15 },
       limitDist: 0,
     },
+    {
+      id: '90PERSON',
+      name: {
+        en: 'Quarterly Budapest-pass',
+        hu: 'Negyedéves Budapest-bérlet természetes személyeknek',
+      },
+      price: 28500,
+      validity: { minutes: 0, days: 90 },
+      limitDist: 0,
+    },
+    {
+      id: '90PUPIL',
+      name: {
+        en: 'Quarterly Budapest-pass',
+        hu: 'Negyedéves Budapest-bérlet közoktatásban tanulóknak',
+      },
+      price: 10350,
+      validity: { minutes: 0, days: 90 },
+      limitDist: 0,
+    },
+    {
+      id: '90BUSINESS',
+      name: {
+        en: 'Quarterly Budapest-pass (business)',
+        hu: 'Negyedéves Budapest-bérlet nem természetes személyeknek',
+      },
+      price: 31500,
+      validity: { minutes: 0, days: 90 },
+      limitDist: 0,
+    },
   ],
   fetchTypes() {},
   getType(passType) {
     switch (passType.id) {
+      case '90PUPIL':
       case '30PUPIL':
       case '15PUPIL': {
         return 'student';
       }
+      case '90PERSON':
       case '30PERSON':
       case '15PERSON': {
         return 'private';
       }
+      case '90BUSINESS':
       case '30BUSINESS':
       case '15BUSINESS': {
         return 'business';
@@ -82,6 +115,9 @@ const inspector = store({
         return 'error';
     }
   },
+  getTypeById(id) {
+    return tickets.types.find(type => type.id === id);
+  },
 });
 
-export default inspector;
+export default tickets;

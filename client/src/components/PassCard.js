@@ -1,11 +1,23 @@
 import React, { Component } from 'react';
 import { route, view } from 'react-stax';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import PropTypes from 'prop-types';
 import colorPresets from './colorPresets';
 
 // Icons
 import PersonIcon from '../assets/person.png';
+
+const onShow = keyframes`
+  from {
+    margin-top: 10px;
+    opacity: 0;
+  }
+
+  to {
+    margin-top: 0;
+    opacity: 1;
+  }
+`;
 
 const Container = styled.div`
   position: relative;
@@ -14,17 +26,16 @@ const Container = styled.div`
   max-width: 180px;
   max-height: 198px;
   border-radius: 15px;
-  box-shadow: 0 2.5px 15px #999;
+  box-shadow: 0 5px 20px #888;
   background-image: ${({ type }) => `linear-gradient(to bottom right, ${colorPresets[type][0]}, ${colorPresets[type][1]})`};
   color: #fff;
   padding: 1.25em !important;
   margin: 0 1em 0 0 !important;
-  transition: all 0.2s ease-in-out;
-  /* :hover {
-    margin-top: -0.5em !important;
-    box-shadow: ${({ type }) => `0 5px 2.5px ${colorPresets[type][1]}`};
-    transition: all 0.1s ease-in-out;
-  } */
+  animation: ${onShow} 1s ease-in-out 1;
+  transition: all 0.1s ease-in-out;
+  :hover {
+    box-shadow: ${({ isMini }) => (isMini ? '0 5px 20px #888' : '0 1px 5px #999')};
+  }
 `;
 
 const Text = styled.h1`
@@ -54,16 +65,19 @@ const getIcon = type => {
 };
 
 class PassCard extends Component {
-  componentDidMount() {
-    // this componentDidMount is only here temporarily
-  }
+  componentDidMount() {}
 
   render() {
     const {
-      id, passType, name, price, validity, limitDist
+      id, passType, name, price, mini,
     } = this.props;
     return (
-      <Container type={passType} key={id} onClick={() => route({ to: 'pass-details', params: this.props })}>
+      <Container
+        isMini={mini}
+        type={passType}
+        key={id}
+        onClick={() => !mini && route({ to: '/details', params: { id } })}
+      >
         <Image alt="Logo" src={getIcon(passType)} />
         <Text>{name.en}</Text>
         <Text style={{ position: 'absolute', bottom: 15 }}>{`${price} HUF`}</Text>
@@ -77,8 +91,11 @@ PassCard.propTypes = {
   passType: PropTypes.string.isRequired,
   name: PropTypes.objectOf(PropTypes.string).isRequired,
   price: PropTypes.number.isRequired,
-  validity: PropTypes.objectOf(PropTypes.number).isRequired,
-  limitDist: PropTypes.number.isRequired,
+  mini: PropTypes.bool,
+};
+
+PassCard.defaultProps = {
+  mini: false,
 };
 
 export default view(PassCard);

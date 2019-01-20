@@ -4,7 +4,7 @@
   "description": "An open-source electronic public transport ticket system made for Budapest.",
   "main": "index.js",
   "scripts": {
-    "start": "concurrently \"cd backend && yarn start\" \"cd client && HTTPS=true yarn start\"",
+    "start": "concurrently \"cd backend && yarn start\" \"cd client && yarn start\"",
     "depinit": "yarn && concurrently \"cd backend && yarn\" \"cd client && yarn\""
   },
   "keywords": [],

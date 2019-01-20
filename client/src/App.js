@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Router } from 'react-stax';
 import './App.css';
 import styled from 'styled-components';
@@ -10,18 +10,14 @@ const Container = styled.div`
   background-color: #eee;
 `;
 
-class App extends Component {
-  render() {
-    return (
-      <Container className="App">
-        <Router defaultPage="/">
-          <Home page="/" />
-          <Inspector page="inspector" />
-          <Details page="pass-details" />
-        </Router>
-      </Container>
-    );
-  }
-}
+const App = () => (
+  <Container className="App">
+    <Router defaultPage="home">
+      <Home page="home" />
+      <Inspector page="inspector" />
+      <Details page="details" />
+    </Router>
+  </Container>
+);
 
 export default App;
