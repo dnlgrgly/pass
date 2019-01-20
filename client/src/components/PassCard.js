@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { route, view } from 'react-stax';
 import styled, { keyframes } from 'styled-components';
 import PropTypes from 'prop-types';
-import colorPresets from './colorPresets';
+import colorPresets from '../assets/colorPresets';
 
 // Icons
 import PersonIcon from '../assets/person.png';
@@ -34,7 +34,7 @@ const Container = styled.div`
   animation: ${onShow} 1s ease-in-out 1;
   transition: all 0.1s ease-in-out;
   :hover {
-    box-shadow: ${({ isMini }) => (isMini ? '0 5px 20px #888' : '0 1px 5px #999')};
+    box-shadow: '0 1px 5px #999';
   }
 `;
 
@@ -69,14 +69,13 @@ class PassCard extends Component {
 
   render() {
     const {
-      id, passType, name, price, mini,
+      id, passType, name, price,
     } = this.props;
     return (
       <Container
-        isMini={mini}
         type={passType}
         key={id}
-        onClick={() => !mini && route({ to: '/details', params: { id } })}
+        onClick={() => route({ to: '/details', params: { id } })}
       >
         <Image alt="Logo" src={getIcon(passType)} />
         <Text>{name.en}</Text>
@@ -91,11 +90,6 @@ PassCard.propTypes = {
   passType: PropTypes.string.isRequired,
   name: PropTypes.objectOf(PropTypes.string).isRequired,
   price: PropTypes.number.isRequired,
-  mini: PropTypes.bool,
-};
-
-PassCard.defaultProps = {
-  mini: false,
 };
 
 export default view(PassCard);
