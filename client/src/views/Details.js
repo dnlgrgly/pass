@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { view, params } from 'react-stax';
+import { view, params, route } from 'react-stax';
 import styled, { keyframes } from 'styled-components';
 import colorPresets from '../assets/colorPresets';
 import LogoIcon from '../assets/logo_trans.png';
@@ -31,12 +31,12 @@ const Title = styled.h2`
 
 const onShow = keyframes`
   from {
-    margin-top: 10px;
+    margin-top: 2em;
     opacity: 0;
   }
 
   to {
-    margin-top: 0;
+    margin-top: 1em;
     opacity: 1;
   }
 `;
@@ -44,13 +44,13 @@ const onShow = keyframes`
 const Card = styled.div`
   position: relative;
   width: 80vw;
-  height: 50vh;
+  height: 5 * 1em;
   border-radius: 15px;
   box-shadow: 0 5px 20px #888;
   background-image: ${({ type }) => `linear-gradient(to bottom right, ${colorPresets[type][0]}, ${colorPresets[type][1]})`};
   color: #fff;
   padding: 1.25em !important;
-  margin: 1em 1em 0 0 !important;
+  margin: 1em auto 0 auto !important;
   animation: ${onShow} 1s ease-in-out 1;
   transition: all 0.1s ease-in-out;
   text-align: center;
@@ -59,9 +59,22 @@ const Card = styled.div`
   }
 `;
 
+const Row = styled.div`
+  display: flex;
+  text-align: left;
+  margin: 0 -1.25em;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  * {
+    flex: 1;
+    margin: 'auto';
+  }
+`;
+
 const Image = styled.img`
   width: 30vw;
-  margin: 0.5em 0;
+  max-width: 6em;
+  margin: 0.5em auto;
 `;
 
 const getIcon = type => {
@@ -99,18 +112,25 @@ class Details extends Component {
     if (!type) { return null; }
     return (
       <Container>
-        <Logo alt="Logo" src={LogoIcon} />
+        <Logo alt="Logo" src={LogoIcon} onClick={() => route({ to: 'home' })} />
         <Card type={ticketStore.getType(type)}>
-          <Title style={{ fontSize: '1.25em', textTransform: 'uppercase' }}>
-            {new Date().toLocaleString()}
-          </Title>
           <Image alt="Logo" src={getIcon(type)} />
           <Title>
             {type.name.en}
           </Title>
           <Title style={{ fontSize: '2.5em' }}>
-            {new Date().addDays(30).toLocaleString()}
+            {new Date().addDays(30).toLocaleDateString()}
           </Title>
+          <Row>
+            <div style={{ borderRight: '1px solid rgba(255, 255, 255, 0.3)', padding: '0.5em' }}>
+              <p>valid with</p>
+              <h2>{type.validWith.en}</h2>
+            </div>
+            <div style={{ padding: '0.5em' }}>
+              <p>validity over Budapest-border:</p>
+              <h2>{`${type.limitDist} km`}</h2>
+            </div>
+          </Row>
         </Card>
       </Container>
     );
